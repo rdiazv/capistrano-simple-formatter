@@ -28,6 +28,14 @@ Set the Capistrano `format` to `:simple`:
 set :format, :simple
 ```
 
+Adjust the log level as needed:
+
+```ruby
+# deploy.rb
+
+set :log_level, :fatal
+```
+
 Then, within any `task` block you can access the formatter through `SSHKit.config.output`, or just `output` within an `on` block.
 
 ### Examples

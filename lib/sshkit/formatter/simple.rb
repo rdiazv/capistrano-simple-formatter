@@ -4,7 +4,7 @@ require 'sshkit'
 
 module SSHKit
   module Formatter
-    class Simple < Abstract
+    class Simple < Pretty
       def initialize(original_output)
         super(original_output)
 
@@ -59,10 +59,6 @@ module SSHKit
       def success(message = '✔')
         result(message.green)
       end
-
-      def write(message) end
-
-      alias :<< :write
     end
   end
 end
